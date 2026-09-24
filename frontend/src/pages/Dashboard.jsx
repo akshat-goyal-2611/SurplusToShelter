@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { API_URL } from "../config";
 
 function Dashboard() {
   const [stats, setStats] = useState({
