@@ -48,12 +48,12 @@ const donationSchema = new mongoose.Schema({
 
 restaurantName: {
   type: String,
-  required: true
+  required: false
 },
 
 contactNumber: {
   type: String,
-  required: true
+  required: false
 },
 
 });
