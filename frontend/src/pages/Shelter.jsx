@@ -20,7 +20,7 @@ function Shelter() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/shelters",
+        `${API_URL}/api/shelters`,
         {
           method: "POST",
           headers: {

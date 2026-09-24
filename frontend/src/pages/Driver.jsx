@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
+import { API_URL } from "../config";
 
 function Driver() {
   const [donations, setDonations] = useState([]);
 
   const loadDonations = async () => {
     const response = await fetch(
-      "http://localhost:5000/api/donations"
+      `${API_URL}/api/donations`
     );
 
     const data = await response.json();
@@ -18,7 +19,7 @@ function Driver() {
 
   const updateStatus = async (id, status) => {
     await fetch(
-      `http://localhost:5000/api/donations/${id}/status`,
+      `${API_URL}/api/donations/${id}/status`,
       {
         method: "PUT",
         headers: {

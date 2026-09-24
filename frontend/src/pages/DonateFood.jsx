@@ -25,7 +25,7 @@ function DonateFood() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/donations",
+        `${API_URL}/api/donations`,
         {
           method: "POST",
           headers: {
@@ -61,7 +61,7 @@ function DonateFood() {
   const findMatch = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/match/${donationId}`,
+        `${API_URL}/api/match/${donationId}`,
         {
           method: "POST"
         }

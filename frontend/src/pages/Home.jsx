@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../config";
 
 function Home() {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ function Home() {
     const loadStats = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/dashboard"
+          `${API_URL}/api/dashboard`
         );
 
         const data = await response.json();
